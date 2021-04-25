@@ -1,0 +1,69 @@
+Problem Statement 
+Two given array of size n1*n2 nd n2*n3your task is to multiply these matrices 
+and output the mu;ltiplied matrix.
+
+
+Input
+3 3 2
+
+2 4 3 
+6 4 8 
+1 7 9
+
+3 2 
+5 6
+7 8
+
+
+
+Code
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int n1, n2,n3;
+	cin>> n1>>n2>>n3;
+	int mat1[n1][n2];
+	int mat2[n2][n3];
+	for(int i=0; i<n1; i++){
+	    for(int j =0; j<n2;j++){
+	        cin>>mat1[i][j];
+	    }
+	}
+	 for(int i=0; i<n2; i++){
+	  for(int j =0; j<n3;j++){
+	        cin>>mat2[i][j];
+	    }
+	    
+	}
+	int ans[n1][n3];
+	for(int i=0; i<n1;i++){
+	    for(int j=0; j<n3;j++){
+	        ans[i][j] =0;
+	        
+	    }
+	}
+	for(int i=0; i<n1;i++){
+	    for(int j=0;j<n3;j++){
+	        for(int k=0; k<n2; k++){
+	            ans[i][j] += mat1[i][k]*mat2[k][j];
+	        }
+	    }
+	}  
+	
+	for(int i=0;i<n1;i++){
+	    for(int j=0; j<n3; j++)
+	        cout<< ans[i][j]<<" ";
+	        
+	   cout<<endl;     
+	    
+	}
+	return 0;
+}
+
+output
+47 52 
+94 100 
+101 116 
+
