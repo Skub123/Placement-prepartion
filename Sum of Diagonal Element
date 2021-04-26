@@ -1,0 +1,44 @@
+WAP to sum of diagonal lement in 2d ARRAY
+
+Input
+3
+1 2 3
+4 5 6
+7 8 9
+
+Source code
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int n;
+	cin>>n;
+	int a[n][n];
+	for(int i=0;i<n;i++){
+	    for(int j=0;j<n;j++){
+	        cin>>a[i][j];
+	    }
+	    
+	}
+	int sum =0;
+	for(int i=0;i<n;i++){
+	    for(int j=0;j<n;j++){
+	        if(i==j)
+	        sum = sum+a[i][j];
+	    }
+	    
+	  
+	}
+	
+	
+	 cout<<sum; 
+	
+	
+	return 0;
+}
+
+Output
+15
+
