@@ -1,0 +1,25 @@
+Given 2*n Matrix board  and the tiles of sizre 2*1 , count the number of the ways to tile the given board using these tiles;
+
+#include <iostream>
+using namespace std;
+
+int tillingWay( int n){
+    if(n==0){
+        return 0;
+        
+    }
+     if (n==1){
+         return 1;
+         
+     }
+     
+     return tillingWay(n-1) + tillingWay(n-2);
+}
+int main() {
+    // int n;
+    // cin>>n;
+    cout<<tillingWay(4)<<endl;
+	// your code goes here
+	
+	return 0;
+}
